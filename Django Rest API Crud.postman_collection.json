@@ -1,0 +1,629 @@
+{
+	"info": {
+		"_postman_id": "e8bdc51c-97d8-4130-9ea1-36fcafa52de4",
+		"name": "Django Rest API Crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29801289"
+	},
+	"item": [
+		{
+			"name": "JWT User Auth",
+			"item": [
+				{
+					"name": "Register",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "calebjanaltair@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "User Test",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "tc",
+									"value": "True",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://drfs.arslanstack.com/api/user/register/",
+							"protocol": "https",
+							"host": [
+								"drfs",
+								"arslanstack",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "calebjanaltair@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://drfs.arslanstack.com/api/user/login/",
+							"protocol": "https",
+							"host": [
+								"drfs",
+								"arslanstack",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile/Me",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NDc5Mjc0LCJpYXQiOjE3MTMyNjk2NzQsImp0aSI6IjEwNDFhYzEyYzJkZjQzNzU5ODdjMTA4NDg0NTI1NmI3IiwidXNlcl9pZCI6NH0.qIgVcAzChnWj7qK3_4ZFDdWuu2q1TUZT_k9JniOIysk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://drfs.arslanstack.com/api/user/me/",
+							"protocol": "https",
+							"host": [
+								"drfs",
+								"arslanstack",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"me",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NDc5Mjc0LCJpYXQiOjE3MTMyNjk2NzQsImp0aSI6IjEwNDFhYzEyYzJkZjQzNzU5ODdjMTA4NDg0NTI1NmI3IiwidXNlcl9pZCI6NH0.qIgVcAzChnWj7qK3_4ZFDdWuu2q1TUZT_k9JniOIysk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://drfs.arslanstack.com/api/user/refresh/",
+							"protocol": "https",
+							"host": [
+								"drfs",
+								"arslanstack",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Pswd",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NTAzOTIyLCJpYXQiOjE3MTMyOTQzMjIsImp0aSI6IjBmNTA3YWFiYWQ2NTRmNzFiMWY2OTJmMmZiMTIyOTYyIiwidXNlcl9pZCI6Mn0.lNF3zTzfviIFsu_MnDBXUhrX4QNLX7frr_FQYHK_a7I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://drfs.arslanstack.com/api/user/changepassword/",
+							"protocol": "https",
+							"host": [
+								"drfs",
+								"arslanstack",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"changepassword",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Reset Email",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "calebjanaltair@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://drfs.arslanstack.com/api/user/send-reset-password-email/",
+							"protocol": "https",
+							"host": [
+								"drfs",
+								"arslanstack",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"send-reset-password-email",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "password2",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://drfs.arslanstack.com/api/user/reset-password/NA/c5kg74-4440be9ac023ec4088297d3f675d8c5b/",
+							"protocol": "https",
+							"host": [
+								"drfs",
+								"arslanstack",
+								"com"
+							],
+							"path": [
+								"api",
+								"user",
+								"reset-password",
+								"NA",
+								"c5kg74-4440be9ac023ec4088297d3f675d8c5b",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NDc5MzA5LCJpYXQiOjE3MTMyNjk3MDksImp0aSI6IjU0MzE2NzlhODNkOTRiNzg4MjVhYmNlZjk5MmNhMzZlIiwidXNlcl9pZCI6NH0.bFatlPXGk3k1B0O1Cx5mSPMbj9HmuJaMdSzdm-OyW4E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://drfs.arslanstack.com/api/blogs/",
+							"protocol": "https",
+							"host": [
+								"drfs",
+								"arslanstack",
+								"com"
+							],
+							"path": [
+								"api",
+								"blogs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NDc5MzA5LCJpYXQiOjE3MTMyNjk3MDksImp0aSI6IjU0MzE2NzlhODNkOTRiNzg4MjVhYmNlZjk5MmNhMzZlIiwidXNlcl9pZCI6NH0.bFatlPXGk3k1B0O1Cx5mSPMbj9HmuJaMdSzdm-OyW4E",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://drfs.arslanstack.com/api/blogs/rust-the-programming-language-of-the-future",
+							"protocol": "https",
+							"host": [
+								"drfs",
+								"arslanstack",
+								"com"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"rust-the-programming-language-of-the-future"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Blog",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NDc5MzA5LCJpYXQiOjE3MTMyNjk3MDksImp0aSI6IjU0MzE2NzlhODNkOTRiNzg4MjVhYmNlZjk5MmNhMzZlIiwidXNlcl9pZCI6NH0.bFatlPXGk3k1B0O1Cx5mSPMbj9HmuJaMdSzdm-OyW4E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Rust: The Programming Language of the Future",
+									"type": "text"
+								},
+								{
+									"key": "subtitle",
+									"value": "In the ever-evolving landscape of programming languages, one name has steadily risen to prominence: Rust.",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "In the ever-evolving landscape of programming languages, one name has steadily risen to prominence: Rust. More than just a trendy fad, Rust offers a unique blend of features that address the needs of modern software development, making it a compelling choice for projects of all sizes.\n\nBut what exactly makes Rust so special, and why are developers increasingly calling it the language of the future? Let’s delve into the key aspects that set Rust apart and explore why it might be the perfect tool for your next project.\n1. Blazing Speed and Memory Efficiency\n\nRust stands shoulder-to-shoulder with C++ in terms of raw performance, making it ideal for resource-intensive tasks. However, unlike C++, Rust achieves this speed without compromising on memory safety. Its innovative ownership system and borrow checker statically prevent memory leaks and dangling pointers, eliminating entire categories of bugs that plague other languages. This results in software that is not only fast but also incredibly stable and secure.\n2. Unparalleled Developer Experience\n\nWhile some high-performance languages require developers to navigate complex syntax and memory management, Rust prioritizes developer experience. Its clean and expressive syntax feels familiar yet powerful, and its strong type system and compiler offer helpful error messages that guide you towards correct code. This reduces development time and frustration, allowing you to focus on building great software instead of wrestling with the language.\n3. Built for Concurrency and Reliability\n\nModern applications often require handling multiple tasks concurrently, which can be a challenge in many languages. Rust shines in this area, offering built-in support for safe and efficient concurrency through its ownership model and data structures like channels and mutexes. This makes it ideal for building multi-threaded applications, web servers, and other systems that demand high performance and reliability.\n4. A Thriving and Welcoming Community\n\nOne of Rust’s greatest strengths is its vibrant and supportive community. From online forums and chat channels to local meetups and conferences, there are countless avenues for learning, collaboration, and problem-solving. This welcoming environment fosters continuous improvement and knowledge sharing, making it easier for newcomers to learn the language and for experienced developers to contribute to its evolution.\n5. Versatility Across Domains\n\nRust’s unique combination of features makes it incredibly versatile. It excels in areas like:\n\n    Systems programming: Operating systems, embedded systems, and other low-level applications benefit from Rust’s speed, memory safety, and control.\n    Web development: Rust’s performance and safety translate well to building web services, APIs, and even front-end applications with frameworks like WASM.\n    Data science and machine learning: Rust’s speed and expressiveness make it well-suited for computationally intensive tasks and data analysis.\n    Game development: The need for high performance and efficient resource management makes Rust a great choice for building game engines and games themselves.\n\nThis versatility means that learning Rust equips you with a valuable skillset applicable across various domains, opening up new opportunities and career paths.\nEmbracing the Future with Rust\n\nWhile no language is a silver bullet, Rust presents a compelling option for developers looking for a performant, reliable, and enjoyable language to build the software of tomorrow. Its focus on safety, speed, and developer experience makes it a powerful tool for tackling the challenges of modern software development.\n\nWhether you’re a seasoned programmer or just starting your coding journey, consider taking the plunge into the world of Rust. With its vibrant community, comprehensive resources, and bright future, Rust is more than just a language; it’s an investment in your development skills and the future of software.\n\nThis introduction to Rust is just the beginning of an exciting journey. Stay tuned for more in-depth explorations of the language, its features, and its applications in upcoming blog posts. And if you’re eager to dive into hands-on learning, keep an eye out for the launch of my free Rust Programming Tutorials Series on YouTube! We’ll be covering all the fundamentals and building exciting projects together, so subscribe and join me as we unlock the power of Rust! Until then connect with me on Instagram so you stay updated!",
+									"type": "text"
+								},
+								{
+									"key": "published_date",
+									"value": "2024-04-16T16:18:00Z",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "draft",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://drfs.arslanstack.com/api/blogs/create/",
+							"protocol": "https",
+							"host": [
+								"drfs",
+								"arslanstack",
+								"com"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Blog",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NDc5MzA5LCJpYXQiOjE3MTMyNjk3MDksImp0aSI6IjU0MzE2NzlhODNkOTRiNzg4MjVhYmNlZjk5MmNhMzZlIiwidXNlcl9pZCI6NH0.bFatlPXGk3k1B0O1Cx5mSPMbj9HmuJaMdSzdm-OyW4E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Rust: The Programming Language of the Future",
+									"type": "text"
+								},
+								{
+									"key": "subtitle",
+									"value": "In the ever-evolving landscape of programming languages, one name has steadily risen to prominence: Rust.",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "In the ever-evolving landscape of programming languages, one name has steadily risen to prominence: Rust. More than just a trendy fad, Rust offers a unique blend of features that address the needs of modern software development, making it a compelling choice for projects of all sizes.\n\nBut what exactly makes Rust so special, and why are developers increasingly calling it the language of the future? Let’s delve into the key aspects that set Rust apart and explore why it might be the perfect tool for your next project.\n1. Blazing Speed and Memory Efficiency\n\nRust stands shoulder-to-shoulder with C++ in terms of raw performance, making it ideal for resource-intensive tasks. However, unlike C++, Rust achieves this speed without compromising on memory safety. Its innovative ownership system and borrow checker statically prevent memory leaks and dangling pointers, eliminating entire categories of bugs that plague other languages. This results in software that is not only fast but also incredibly stable and secure.\n2. Unparalleled Developer Experience\n\nWhile some high-performance languages require developers to navigate complex syntax and memory management, Rust prioritizes developer experience. Its clean and expressive syntax feels familiar yet powerful, and its strong type system and compiler offer helpful error messages that guide you towards correct code. This reduces development time and frustration, allowing you to focus on building great software instead of wrestling with the language.\n3. Built for Concurrency and Reliability\n\nModern applications often require handling multiple tasks concurrently, which can be a challenge in many languages. Rust shines in this area, offering built-in support for safe and efficient concurrency through its ownership model and data structures like channels and mutexes. This makes it ideal for building multi-threaded applications, web servers, and other systems that demand high performance and reliability.\n4. A Thriving and Welcoming Community\n\nOne of Rust’s greatest strengths is its vibrant and supportive community. From online forums and chat channels to local meetups and conferences, there are countless avenues for learning, collaboration, and problem-solving. This welcoming environment fosters continuous improvement and knowledge sharing, making it easier for newcomers to learn the language and for experienced developers to contribute to its evolution.\n5. Versatility Across Domains\n\nRust’s unique combination of features makes it incredibly versatile. It excels in areas like:\n\n    Systems programming: Operating systems, embedded systems, and other low-level applications benefit from Rust’s speed, memory safety, and control.\n    Web development: Rust’s performance and safety translate well to building web services, APIs, and even front-end applications with frameworks like WASM.\n    Data science and machine learning: Rust’s speed and expressiveness make it well-suited for computationally intensive tasks and data analysis.\n    Game development: The need for high performance and efficient resource management makes Rust a great choice for building game engines and games themselves.\n\nThis versatility means that learning Rust equips you with a valuable skillset applicable across various domains, opening up new opportunities and career paths.\nEmbracing the Future with Rust\n\nWhile no language is a silver bullet, Rust presents a compelling option for developers looking for a performant, reliable, and enjoyable language to build the software of tomorrow. Its focus on safety, speed, and developer experience makes it a powerful tool for tackling the challenges of modern software development.\n\nWhether you’re a seasoned programmer or just starting your coding journey, consider taking the plunge into the world of Rust. With its vibrant community, comprehensive resources, and bright future, Rust is more than just a language; it’s an investment in your development skills and the future of software.\n\nThis introduction to Rust is just the beginning of an exciting journey. Stay tuned for more in-depth explorations of the language, its features, and its applications in upcoming blog posts. And if you’re eager to dive into hands-on learning, keep an eye out for the launch of my free Rust Programming Tutorials Series on YouTube! We’ll be covering all the fundamentals and building exciting projects together, so subscribe and join me as we unlock the power of Rust! Until then connect with me on Instagram so you stay updated!",
+									"type": "text"
+								},
+								{
+									"key": "published_date",
+									"value": "2024-04-16T16:18:00Z",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "published",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://drfs.arslanstack.com/api/blogs/update/",
+							"protocol": "https",
+							"host": [
+								"drfs",
+								"arslanstack",
+								"com"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE0NDc5MzA5LCJpYXQiOjE3MTMyNjk3MDksImp0aSI6IjU0MzE2NzlhODNkOTRiNzg4MjVhYmNlZjk5MmNhMzZlIiwidXNlcl9pZCI6NH0.bFatlPXGk3k1B0O1Cx5mSPMbj9HmuJaMdSzdm-OyW4E",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://drfs.arslanstack.com/api/blogs/delete/",
+							"protocol": "https",
+							"host": [
+								"drfs",
+								"arslanstack",
+								"com"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"delete",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
